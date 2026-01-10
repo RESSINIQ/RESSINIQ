@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Contact | RESSINIQ</title>
-<meta name="description" content="Get in touch with RESSINIQ to discuss ideas, products, or collaborations.">
+<meta name="description" content="Get in touch with RESSINIQ to discuss ideas, products, or long-term collaborations.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -14,40 +14,85 @@
   <div class="logo">RESSINIQ</div>
   <nav>
     <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
     <a href="products.html">Products</a>
     <a href="founder.html">Founder</a>
     <button id="themeToggle">🌙</button>
   </nav>
 </header>
 
-<section class="section">
-  <div class="reveal" style="max-width:680px;margin:auto">
-
+<!-- HERO -->
+<section class="hero" style="
+  min-height:65vh;
+  background:
+    radial-gradient(60% 60% at 50% 20%, var(--accent-glow), transparent 70%),
+    linear-gradient(180deg, var(--bg), var(--bg-soft));
+">
+  <div class="reveal">
     <h1>Contact</h1>
-
-    <p style="color:var(--muted);margin-bottom:2rem">
-      Whether you’re exploring an idea, a custom product, or a long-term collaboration,
-      feel free to reach out. We respond thoughtfully and without pressure.
+    <p>
+      Thoughtful conversations lead to meaningful work.
+      If you have an idea, requirement, or question — feel free to reach out.
     </p>
+  </div>
+</section>
 
-    <form id="contactForm">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit" class="btn">Send Enquiry</button>
-    </form>
+<!-- CONTACT CONTENT -->
+<section class="section">
+  <div class="reveal" style="
+    max-width:820px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:3rem;
+  ">
 
-    <p id="formStatus" style="margin-top:1rem;color:var(--muted)"></p>
+    <!-- LEFT: TEXT -->
+    <div>
+      <h2>Start a conversation</h2>
 
-    <p style="margin-top:3rem">
-      Instagram: 
-      <a href="https://instagram.com/ressiniq" target="_blank">@ressiniq</a>
-    </p>
+      <p style="color:var(--muted);margin-top:1rem">
+        Whether you’re exploring a custom digital system, a crafted product,
+        or a long-term collaboration, we approach every enquiry with care
+        and attention.
+      </p>
 
-    <div class="map" style="margin-top:2rem;color:var(--muted)">
-      [Google Map Placeholder]
+      <p style="color:var(--muted);margin-top:1rem">
+        We don’t rush responses — we respond thoughtfully.
+      </p>
+
+      <p style="margin-top:2rem;color:var(--muted);font-size:0.95rem">
+        For quicker responses, you’re welcome to reach us on Instagram —
+        <a href="https://instagram.com/ressiniq" target="_blank" style="color:var(--accent);font-weight:600">
+          @ressiniq
+        </a>
+      </p>
     </div>
 
+    <!-- RIGHT: FORM CARD -->
+    <div class="card">
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Tell us about your requirement" required></textarea>
+        <button type="submit" class="btn" style="width:100%">
+          Send Enquiry
+        </button>
+      </form>
+
+      <p id="formStatus" style="margin-top:1rem;color:var(--muted)"></p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER CTA -->
+<section class="section alt">
+  <div class="reveal" style="text-align:center;max-width:720px;margin:auto">
+    <h2>We value clarity over urgency.</h2>
+    <p style="color:var(--muted);margin-top:1rem">
+      Every message is read carefully, and every response is intentional.
+    </p>
   </div>
 </section>
 
@@ -57,6 +102,7 @@
 
 <script src="assets/js/main.js"></script>
 
+<!-- CONTACT FORM SCRIPT -->
 <script>
 const form = document.getElementById("contactForm");
 const status = document.getElementById("formStatus");
@@ -79,7 +125,7 @@ form.addEventListener("submit", async (e) => {
     } else {
       status.textContent = "Something went wrong. Please try again.";
     }
-  } catch (error) {
+  } catch {
     status.textContent = "Network error. Please try again later.";
   }
 });
