@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact | RESSINIQ</title>
+<meta name="description" content="Get in touch with RESSINIQ to discuss ideas, products, or collaborations.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="logo">RESSINIQ</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="founder.html">Founder</a>
+    <button id="themeToggle">🌙</button>
+  </nav>
+</header>
+
+<section class="section">
+  <div class="reveal" style="max-width:680px;margin:auto">
+
+    <h1>Contact</h1>
+
+    <p style="color:var(--muted);margin-bottom:2rem">
+      Whether you’re exploring an idea, a custom product, or a long-term collaboration,
+      feel free to reach out. We respond thoughtfully and without pressure.
+    </p>
+
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="btn">Send Enquiry</button>
+    </form>
+
+    <p id="formStatus" style="margin-top:1rem;color:var(--muted)"></p>
+
+    <p style="margin-top:3rem">
+      Instagram: 
+      <a href="https://instagram.com/ressiniq" target="_blank">@ressiniq</a>
+    </p>
+
+    <div class="map" style="margin-top:2rem;color:var(--muted)">
+      [Google Map Placeholder]
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 RESSINIQ</p>
+</footer>
+
+<script src="assets/js/main.js"></script>
+
+<script>
+const form = document.getElementById("contactForm");
+const status = document.getElementById("formStatus");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  status.textContent = "Sending…";
+
+  const data = new FormData(form);
+
+  try {
+    const response = await fetch("api/send-enquiry.php", {
+      method: "POST",
+      body: data
+    });
+
+    if (response.ok) {
+      status.textContent = "Thank you. Your enquiry has been sent successfully.";
+      form.reset();
+    } else {
+      status.textContent = "Something went wrong. Please try again.";
+    }
+  } catch (error) {
+    status.textContent = "Network error. Please try again later.";
+  }
+});
+</script>
+
+</body>
+</html>
