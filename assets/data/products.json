@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "name": "Handcrafted Wooden Wall Organizer",
+    "category": "Wood Products",
+    "type": "WOOD",
+    "description": "Minimal handcrafted wooden wall organizer designed for modern spaces.",
+    "materials": "Solid wood",
+    "images": [
+      "assets/images/products/wood-organizer-1.jpg",
+      "assets/images/products/wood-organizer-2.jpg"
+    ],
+    "status": "active"
+  }
+]
