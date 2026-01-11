@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Product | RESSINIQ</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<section class="section" id="product"></section>
+
+<script>
+const id = new URLSearchParams(window.location.search).get('id');
+
+fetch('assets/data/products.json')
+  .then(res => res.json())
+  .then(products => {
+    const p = products.find(x => x.id == id);
+    if (!p) return;
+
+    const images = JSON.parse(p.images || '[]');
+    let gallery = images.map(img =>
+      `<img src="uploads/${img}" />`
+    ).join('');
+
+    document.getElementById('product').innerHTML = `
+      <h1>${p.name}</h1>
+      <div class="gallery">${gallery}</div>
+      <p>${p.description}</p>
+      <p><strong>Materials:</strong> ${p.materials}</p>
+
+      <a class="btn" target="_blank"
+         href="https://instagram.com/ressiniq">
+        Enquire on Instagram
+      </a>
+    `;
+
+    document.title = p.meta_title || p.name;
+  });
+</script>
+
+</body>
+</html>
