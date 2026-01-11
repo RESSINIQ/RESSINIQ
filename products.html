@@ -62,8 +62,8 @@
 fetch('assets/data/products.json')
 .then(res => res.json())
 .then(products => {
-  const wood = document.getElementById('woodProducts');
-  const resin = document.getElementById('resinProducts');
+  const wood = document.getElementById('products');
+  const resin = document.getElementById('products');
 
   if (!products.length) {
     wood.innerHTML = resin.innerHTML = "<p>No products available yet.</p>";
@@ -89,3 +89,4 @@ fetch('assets/data/products.json')
 <script src="assets/js/main.js"></script>
 </body>
 </html>
+
