@@ -1,12 +1,23 @@
 {
-  "id": 2,
-  "name": "Resin Flow Tray",
-  "category": "Resin Products",
-  "description": "Hand-poured resin tray with fluid patterns.",
-  "materials": "Epoxy Resin",
-  "images": [
-    "assets/images/products/resin-tray-1.jpg",
-    "assets/images/products/resin-tray-2.jpg"
+  "categories": [
+    "Resin",
+    "Wood",
+    "Custom",
+    "Digital"
   ],
-  "status": "active"
+  "products": [
+    {
+      "id": "1768924763346",
+      "name": "Pen Holder",
+      "category": "wood",
+      "type": "physical",
+      "price": 499,
+      "status": "live",
+      "images": [
+        "assets/images/1pc Wooden Pen Holder.jpg\"",
+        "assets/images/DIY Wooden Desk Organizer with Multiple Compartments.jpg\""
+      ],
+      "description": "delivery included"
+    }
+  ]
 }

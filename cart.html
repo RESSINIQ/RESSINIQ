@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Product – RESSINIQ</title>
+  <title>Your Cart – RESSINIQ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
 
-<button id="themeToggle" aria-label="Toggle theme"><span></span></button>
+<body>
 
 <header class="nav">
   <div class="nav-inner">
@@ -35,35 +34,35 @@
 </header>
 
 
-<main class="product-page">
+<main class="cart-page">
 
-  <section class="product-layout">
+  <header class="cart-header">
+    <h1>Your Cart</h1>
+    <p class="muted">Review your selected products before sending enquiry</p>
+  </header>
 
-    <!-- GALLERY -->
-    <div class="product-gallery">
-      <img id="mainImage" class="main-image" alt="Product image">
-      <div id="thumbnails" class="thumbnail-row"></div>
-    </div>
+  <section id="cartItems" class="cart-items"></section>
 
-    <!-- INFO -->
-    <div class="product-info">
-      <h1 id="productName"></h1>
-      <p class="muted" id="productCategory"></p>
-      <p class="price" id="productPrice"></p>
-      <p id="productDescription"></p>
+  <section id="cartSummary" class="cart-summary hidden">
+    <div class="cart-summary-box">
+      <h3>Send Enquiry</h3>
+      <p class="muted">We’ll receive your full product list instantly</p>
 
-      <div class="product-actions">
-        <button id="addToCartBtn" class="btn primary">Add to Cart</button>
-        <button id="askQueryBtn" class="btn ghost">Ask a Query</button>
+      <div class="cart-actions">
+        <button id="sendInsta" class="btn primary full">
+          Send via Instagram
+        </button>
+        <button id="sendEmail" class="btn ghost full">
+          Send via Email
+        </button>
       </div>
     </div>
-
   </section>
 
 </main>
 
-<script src="assets/js/main.js"></script>
 <script src="assets/js/cart.js"></script>
-<script src="assets/js/product.js"></script>
+<script src="assets/js/cart-page.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>

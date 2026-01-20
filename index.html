@@ -1,117 +1,111 @@
+<!-- =========================
+FILE: index.html
+========================= -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>RESSINIQ | Designing Intelligence. Crafting Excellence.</title>
-  <meta name="description" content="RESSINIQ designs intelligent systems and crafts premium products with long-term thinking.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="RESSINIQ — Designing Intelligence. Crafting Excellence."/>
+  <title>RESSINIQ — Designing Intelligence</title>
 
-  <meta property="og:title" content="RESSINIQ">
-  <meta property="og:description" content="Designing Intelligence. Crafting Excellence.">
-  <meta property="og:type" content="website">
-
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
+  <!-- Theme Toggle -->
+  <button id="themeToggle" aria-label="Toggle dark mode">
+    <span></span>
+  </button>
 
-<!-- INTRO ANIMATION -->
-<div id="intro">
-  <img src="assets/images/intro-logo.jpg" alt="RESSINIQ">
-</div>
+  <!-- Navigation -->
+  <header class="nav">
+  <div class="nav-inner">
 
-<header class="header">
-  <div class="logo">RESSINIQ</div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="products.html">Products</a>
-    <a href="founder.html">Founder</a>
-    <a href="contact.html">Contact</a>
-    <button id="themeToggle" aria-label="Toggle dark mode">🌙</button>
-  </nav>
+    <!-- LOGO / HOME -->
+    <a href="index.html" class="logo">RESSINIQ</a>
+
+    <!-- NAV LINKS -->
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="services.html">Services</a>
+      <a href="founder.html">Founder</a>
+      <a href="contact.html" class="pill">Contact</a>
+    </nav>
+
+    <!-- CART -->
+    <a href="cart.html" class="cart-link">
+      🛒 <span id="cartCount" class="cart-count hidden">0</span>
+    </a>
+
+  </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="reveal">
-    <h1>Designing Intelligence. Crafting Excellence.</h1>
-    <p>
-      Technology and craftsmanship, guided by long-term thinking.
-    </p>
-    <div class="cta">
-      <a href="services.html" class="btn">What We Build</a>
-      <a href="contact.html" class="btn outline">Start a Conversation</a>
-    </div>
-  </div>
-</section>
 
-<!-- PHILOSOPHY -->
-<section class="section">
-  <div class="reveal" style="max-width:760px;margin:auto;text-align:center">
-    <h2>Built with intention, not impulse.</h2>
-    <p style="color:var(--muted);font-size:1.05rem">
-      RESSINIQ is a design-first studio focused on clarity, durability,
-      and systems that continue to make sense years down the line.
-      We don’t chase trends — we build fundamentals.
-    </p>
-  </div>
-</section>
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="reveal hero-title">Designing Intelligence.<br/>Crafting Excellence.</h1>
+        <p class="reveal hero-subtitle">
+          Technology and craftsmanship, guided by long-term thinking.
+        </p>
+        <div class="hero-actions">
+          <a href="products.html" class="btn primary">Explore Products</a>
+          <a href="services.html" class="btn ghost">View Services</a>
+        </div>
+      </div>
+      <div class="hero-bg parallax-bg"></div>
+    </section>
 
-<!-- WHAT WE BUILD -->
-<section class="section alt">
-  <h2 class="reveal">What we build</h2>
-  <div class="grid">
+    <!-- Philosophy -->
+    <section class="philosophy">
+      <div class="container">
+        <h2>Built for Longevity</h2>
+        <p>
+          RESSINIQ is shaped by discipline, restraint, and clarity.  
+          Every system, product, and interface is designed to remain relevant —
+          not just impressive.
+        </p>
+      </div>
+    </section>
 
-    <div class="card reveal">
-      <h3>Digital Systems</h3>
-      <p style="color:var(--muted)">
-        Custom applications, internal tools, and software systems
-        designed for stability, scale, and real-world use.
-      </p>
-    </div>
+    <!-- Featured -->
+    <section class="featured">
+      <div class="container">
+        <h2>What We Create</h2>
+        <div class="cards">
+          <div class="card parallax-card">
+            <h3>Physical Craft</h3>
+            <p>Resin and wooden products built with patience and precision.</p>
+          </div>
+          <div class="card parallax-card">
+            <h3>Digital Systems</h3>
+            <p>Websites and applications designed to scale and endure.</p>
+          </div>
+          <div class="card parallax-card">
+            <h3>Custom Solutions</h3>
+            <p>Purpose-built systems across physical and digital mediums.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="card reveal">
-      <h3>Crafted Products</h3>
-      <p style="color:var(--muted)">
-        Thoughtfully designed wooden and resin products —
-        functional, minimal, and built with the same discipline
-        we apply to software.
-      </p>
-    </div>
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Let’s Build Something That Lasts</h2>
+        <a href="contact.html" class="btn primary large">Start a Conversation</a>
+      </div>
+    </section>
+  </main>
 
-  </div>
-</section>
+  <footer class="footer">
+    <p>© 2026 RESSINIQ. All rights reserved.</p>
+  </footer>
 
-<!-- FOUNDER LED -->
-<section class="section">
-  <div class="reveal" style="max-width:720px;margin:auto;text-align:center">
-    <h2>Founder-led. Long-term focused.</h2>
-    <p style="color:var(--muted)">
-      RESSINIQ is built hands-on, with decisions driven by longevity,
-      not short-term optics. Every system and product reflects
-      that mindset.
-    </p>
-    <a href="founder.html" class="btn outline" style="margin-top:1.8rem">
-      Meet the Founder
-    </a>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="section alt">
-  <div class="reveal" style="text-align:center">
-    <h2>Let’s build something that lasts.</h2>
-    <a href="contact.html" class="btn" style="margin-top:1.5rem">
-      Get in Touch
-    </a>
-  </div>
-</section>
-
-<footer class="footer">
-  <p>© 2026 RESSINIQ</p>
-</footer>
-
-<script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

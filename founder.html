@@ -1,72 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Founder | RESSINIQ</title>
-<meta name="description" content="Founder of RESSINIQ. Building systems and products with long-term thinking and quiet discipline.">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="assets/css/style.css">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Kunal Rai",
-  "jobTitle": "Founder, RESSINIQ",
-  "sameAs": ["https://instagram.com/kunal_rai05"]
-}
-</script>
+  <meta charset="UTF-8">
+  <title>Founder — RESSINIQ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
 
-<header class="header">
-  <div class="logo">RESSINIQ</div>
-</header>
+<button id="themeToggle"><span></span></button>
 
-<section class="section">
-  <div class="card reveal" style="max-width:780px;margin:auto;text-align:center">
+<header class="nav">
+  <div class="nav-inner">
 
-    <img src="assets/images/founder.jpg"
-         alt="Founder of RESSINIQ"
-         style="width:150px;height:150px;border-radius:50%;object-fit:cover;margin-bottom:1.8rem">
+    <!-- LOGO / HOME -->
+    <a href="index.html" class="logo">RESSINIQ</a>
 
-    <h2>Kunal Rai</h2>
-    <p style="color:var(--muted);font-weight:500;margin-bottom:1.5rem">
-      Founder & Builder
-    </p>
+    <!-- NAV LINKS -->
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="services.html">Services</a>
+      <a href="founder.html">Founder</a>
+      <a href="contact.html" class="pill">Contact</a>
+    </nav>
 
-    <p>
-      RESSINIQ began with a simple principle: build things that continue
-      to make sense over time. Starting the journey at 17, the focus was
-      never speed or visibility — but discipline, learning, and
-      long-term clarity.
-    </p>
-
-    <p style="margin-top:1rem">
-      Rather than chasing rapid growth or short-lived trends, the company
-      is shaped around fundamentals: thoughtful design, reliable systems,
-      and products built with care.
-    </p>
-
-    <p style="margin-top:1rem">
-      The same mindset applies across digital systems and physical
-      craftsmanship — different mediums, same standards.
-    </p>
-
-    <a href="https://instagram.com/kunal_rai05"
-       target="_blank"
-       class="btn"
-       style="margin-top:2.2rem">
-      @kunal_rai05
+    <!-- CART -->
+    <a href="cart.html" class="cart-link">
+      🛒 <span id="cartCount" class="cart-count hidden">0</span>
     </a>
 
   </div>
-</section>
+</header>
 
-<footer class="footer">
-  <p>© 2026 RESSINIQ</p>
-</footer>
+
+<main class="founder-page">
+
+  <section class="founder-layout">
+
+    <!-- CARD -->
+    <div class="founder-card">
+      <img src="assets/images/founder.jpg" alt="Kunal Rai">
+      <h2>Kunal Rai</h2>
+      <p class="muted">Founder, RESSINIQ</p>
+
+      <a
+        href="https://www.instagram.com/kunal_rai05/"
+        target="_blank"
+        class="btn ghost founder-insta"
+      >
+        @kunal_rai05
+      </a>
+    </div>
+
+    <!-- STORY -->
+    <div class="founder-content">
+      <h3>Journey</h3>
+      <p>
+        RESSINIQ began with a simple principle: build things that continue
+        to make sense over time.
+      </p>
+      <p>
+        Starting the journey at 17, the focus was never speed or visibility —
+        but discipline, learning, and long-term clarity.
+      </p>
+      <p>
+        Rather than chasing rapid growth or short-lived trends, the company
+        is shaped around fundamentals: thoughtful design, reliable systems,
+        and products built with care.
+      </p>
+
+      <h3>Vision</h3>
+      <p>
+        The same mindset applies across digital systems and physical
+        craftsmanship — different mediums, same standards.
+      </p>
+    </div>
+
+  </section>
+
+</main>
 
 <script src="assets/js/main.js"></script>
 </body>

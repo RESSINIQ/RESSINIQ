@@ -1,92 +1,79 @@
+<!-- =========================
+FILE: products.html
+========================= -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Products | RESSINIQ</title>
-<meta name="description" content="Thoughtfully designed wooden and resin products by RESSINIQ.">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products — RESSINIQ</title>
+  <meta name="description" content="Products by RESSINIQ"/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
-
 <body>
 
-<header class="header">
-  <div class="logo">RESSINIQ</div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="products.html">Products</a>
-    <a href="contact.html">Contact</a>
-    <button id="themeToggle">🌙</button>
-  </nav>
+<button id="themeToggle" aria-label="Toggle dark mode">
+  <span></span>
+</button>
+
+<header class="nav">
+  <div class="nav-inner">
+
+    <!-- LOGO / HOME -->
+    <a href="index.html" class="logo">RESSINIQ</a>
+
+    <!-- NAV LINKS -->
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="services.html">Services</a>
+      <a href="founder.html">Founder</a>
+      <a href="contact.html" class="pill">Contact</a>
+    </nav>
+
+    <!-- CART -->
+    <a href="cart.html" class="cart-link">
+      🛒 <span id="cartCount" class="cart-count hidden">0</span>
+    </a>
+
+  </div>
 </header>
 
-<section class="section">
-  <div class="reveal" style="max-width:760px;margin:auto;text-align:center">
-    <h2>Products</h2>
-    <p style="color:var(--muted)">
-      Functional forms, restrained aesthetics, and materials chosen to age well.
-      Each product is designed to quietly fit into everyday use.
-    </p>
-  </div>
-</section>
+<main>
 
-<!-- WOOD -->
-<section class="section alt">
-  <div class="reveal" style="max-width:720px;margin-bottom:2.5rem">
-    <h2>Wooden Products</h2>
-    <p style="color:var(--muted)">
-      Warm, minimal, and purpose-driven pieces for workspaces and living spaces.
-      Built to feel familiar from day one.
-    </p>
-  </div>
-  <div id="woodProducts" class="grid reveal"></div>
-</section>
+  <!-- HERO -->
+  <section class="hero small">
+    <div class="hero-content">
+      <h1>Products</h1>
+      <p class="subtitle">
+        Crafted objects & systems designed to endure.
+      </p>
+    </div>
+  </section>
 
-<!-- RESIN -->
-<section class="section">
-  <div class="reveal" style="max-width:720px;margin-bottom:2.5rem">
-    <h2>Resin Products</h2>
-    <p style="color:var(--muted)">
-      Clean forms with subtle expression. Designed as visual anchors without
-      overwhelming the space.
-    </p>
-  </div>
-  <div id="resinProducts" class="grid reveal"></div>
-</section>
+  <!-- CATEGORY SHOWCASE -->
+  <section class="category-showcase">
+    <div class="container">
+      <div id="categoryGrid" class="category-grid"></div>
+    </div>
+  </section>
+
+  <!-- FILTERS + PRODUCTS -->
+  <section>
+    <div class="container">
+      <div class="filters" id="categoryFilters"></div>
+      <div class="cards products-grid" id="productsGrid"></div>
+    </div>
+  </section>
+
+</main>
 
 <footer class="footer">
-  <p>© 2026 RESSINIQ</p>
+  <p>© 2026 RESSINIQ. All rights reserved.</p>
 </footer>
 
-<script>
-fetch('assets/data/products.json')
-.then(res => res.json())
-.then(products => {
-  const wood = document.getElementById('products');
-  const resin = document.getElementById('products');
-
-  if (!products.length) {
-    wood.innerHTML = resin.innerHTML = "<p>No products available yet.</p>";
-    return;
-  }
-
-  products.forEach(p => {
-    const card = document.createElement('div');
-    card.className = "card";
-    card.innerHTML = `
-      ${p.image ? `<img src="assets/uploads/${p.image}" alt="${p.name}">` : ""}
-      <h3>${p.name}</h3>
-      <p style="color:var(--muted);font-size:0.9rem">${p.category_name}</p>
-      <a href="product-detail.html?id=${p.id}" class="btn outline" style="margin-top:1rem">
-        View Details
-      </a>
-    `;
-    (p.type === 'wood' ? wood : resin).appendChild(card);
-  });
-});
-</script>
-
 <script src="assets/js/main.js"></script>
+<script src="assets/js/products.js"></script>
 </body>
 </html>
-

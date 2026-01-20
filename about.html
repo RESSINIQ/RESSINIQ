@@ -1,36 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>About Us | RESSINIQ</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About — RESSINIQ</title>
+  <meta name="description" content="RESSINIQ is built as a system — not a trend-driven brand."/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
 <body>
-<header class="header">
-  <div class="logo">RESSINIQ</div>
+
+<button id="themeToggle"><span></span></button>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">RESSINIQ</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="services.html">Services</a>
+      <a href="founder.html">Founder</a>
+      <a href="contact.html" class="pill">Contact</a>
+    </nav>
+    <a href="cart.html" class="cart-link">🛒 <span id="cartCount" class="cart-count hidden">0</span></a>
+  </div>
 </header>
 
-<section class="section">
-<h1>About RESSINIQ</h1>
-<p>RESSINIQ is a founder-led technology and design company focused on intelligent digital solutions and premium handcrafted products.</p>
+<main class="about-system">
 
-<h2>Vision</h2>
-<p>To blend technology, creativity, and craftsmanship into solutions that genuinely improve daily life.</p>
+  <!-- SYSTEM INTRO -->
+  <section class="system-intro reveal">
+    <span class="system-label">SYSTEM OVERVIEW</span>
+    <h1>RESSINIQ is not built for speed.<br>It is built for continuity.</h1>
+  </section>
 
-<h2>Mission</h2>
-<p>Deliver reliable software and thoughtfully designed products tailored to real-world needs.</p>
+  <!-- FLOATING PANELS -->
+  <section class="system-panels">
 
-<h2>Why Choose Us</h2>
-<ul>
-<li>Founder-driven execution</li>
-<li>Custom-built solutions</li>
-<li>Quality over shortcuts</li>
-</ul>
-</section>
+    <article class="system-panel depth-1 reveal">
+      <span class="panel-index">01</span>
+      <h2>Design Philosophy</h2>
+      <p>
+        Every product and system is designed to remain logical even as
+        circumstances change. Nothing exists for decoration alone.
+      </p>
+    </article>
+
+    <article class="system-panel depth-2 reveal">
+      <span class="panel-index">02</span>
+      <h2>Execution Standard</h2>
+      <p>
+        Whether physical craftsmanship or digital infrastructure,
+        the same discipline applies — reliability, clarity, and restraint.
+      </p>
+    </article>
+
+    <article class="system-panel depth-3 reveal">
+      <span class="panel-index">03</span>
+      <h2>Long-Term Thinking</h2>
+      <p>
+        RESSINIQ avoids short-term wins in favor of systems that compound
+        value over time.
+      </p>
+    </article>
+
+  </section>
+
+  <!-- SIGNATURE -->
+  <section class="system-signature reveal">
+    <p>
+      This website and its systems were entirely designed and built by the
+      founder of RESSINIQ,
+      <strong>Kunal Rai</strong> — independently, end to end.
+    </p>
+    <span class="signature-line"></span>
+  </section>
+
+</main>
 
 <footer class="footer">
-<p>© RESSINIQ</p>
+  <p>© 2026 RESSINIQ</p>
 </footer>
+
+<script src="assets/js/main.js"></script>
 </body>
 </html>
