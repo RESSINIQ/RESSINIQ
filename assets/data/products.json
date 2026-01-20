@@ -7,17 +7,88 @@
   ],
   "products": [
     {
-      "id": "1768924763346",
-      "name": "Pen Holder",
+      "id": "1768941742982",
+      "name": "Pen Holder | Desk Organizer",
       "category": "wood",
       "type": "physical",
       "price": 499,
       "status": "live",
       "images": [
-        "assets/images/1pc Wooden Pen Holder.jpg\"",
-        "assets/images/DIY Wooden Desk Organizer with Multiple Compartments.jpg\""
+        "assets/images/Penholder1.jpg\"",
+        "assets/images/Penholder2.jpg\"",
+        "assets/images/Penholder3.jpg\"",
+        "assets/images/Penholder4.jpg\""
       ],
-      "description": "delivery included"
+      "description": "A clutter-free desk starts here ✨\n\nHandcrafted Wooden Pen Holder by RESSINIQ — designed to keep your workspace organized and stylish.\nPrice: ₹449(Including gst and delivery charges)\n\n🪵 Made from natural wood\n✍️ Perfect for pens, markers, scissors & stationery\n🏡 Ideal for home, office & study table\n\nSimple. Functional. Timeless."
+    },
+    {
+      "id": "1768941927294",
+      "name": "Adjustable Mobile Stand",
+      "category": "wood",
+      "type": "physical",
+      "price": 499,
+      "status": "live",
+      "images": [
+        "assets/images/Mobile_stand1.jpg\"",
+        "assets/images/Mobile_stand2.jpg\"",
+        "assets/images/Mobile_stand3.jpg\"",
+        "assets/images/Mobile_stand4.jpg\""
+      ],
+      "description": "Your phone deserves better than lying flat 📱✨\n\nHandcrafted Wooden Adjustable Mobile Stand by RESSINIQ — designed for comfort, focus & everyday use.\n\n🪵 Natural wooden finish\n🔄 Adjustable viewing angles\n📚 Perfect for study, work, calls & reels\n\n💰 ₹439 | 🚚 Delivery Included\n\n💬 Comment STAND to get full details in DM\n📩 DM us to order"
+    },
+    {
+      "id": "1768942134902",
+      "name": "Wall Organizer",
+      "category": "wood",
+      "type": "physical",
+      "price": 1299,
+      "status": "live",
+      "images": [
+        "assets/images/Wall_organizer1.jpg\"",
+        "assets/images/Wall_organizer2.jpg\"",
+        "assets/images/Wall_organizer3.jpg\"",
+        "assets/images/Wall_organizer4.jpg\""
+      ],
+      "description": "Upgrade your wall, upgrade your vibe ✨\n\nHandcrafted Wooden Wall Organizer by RESSINIQ — perfect for aesthetic study rooms, hostels & workspaces.\n\n🪵 Natural wooden finish\n🔑 Shelf + key holder design\n📚 Ideal for keys, remotes, stationery & daily essentials\n\nMinimal. Functional. Aesthetic.\n\n💰 ₹1129 | 🚚 Delivery Included\n\n💬 Comment WALL to get details in DM\n📩 DM us to order"
+    },
+    {
+      "id": "1768942538854",
+      "name": "Golden Midnight Letter Keychains",
+      "category": "resin",
+      "type": "physical",
+      "price": 150,
+      "status": "live",
+      "images": [
+        "assets/images/we.jpg\"",
+        "assets/images/we2.jpg\""
+      ],
+      "description": "Golden Midnight Letter Keychains ✨🖤\n✨ Personalize your style with our Golden Midnight Letter Keychains! ✨\n\n🔠 Customizable Initials\n🖤 Elegant Black & Gold Design\n💎 Premium Resin Finish\n🎁 Perfect for Gifts & Personal Use at rupees 150 each (excluding deliverycharge)\n\n💌 DM to order now! Limited stock available."
+    },
+    {
+      "id": "1768942701669",
+      "name": "Coloured Spark alphabet keychain ✨🎀💗",
+      "category": "resin",
+      "type": "physical",
+      "price": 150,
+      "status": "live",
+      "images": [
+        "assets/images/✨ Your Initial, Your Galaxy_  Custom Indigo & Silver Resin Keychain.jpg\"",
+        "assets/images/Epoxy Resin Alphabet Keychain (A to Z).jpg\""
+      ],
+      "description": "✨ Personalized Resin Keychain - Letter \"N\" ✨\n\nAdd a touch of sparkle to your everyday essentials! 💖 Handcrafted with golden flakes and pastel glitters, this custom resin keychain is the perfect gift for yourself or your loved ones.\n\n🔹 Price: as mentioned excluding delivery charge\n🔹 Special Pre-Order Offer: ₹85 (Limited to first 3 orders!)\n🔹 DM to order now! 🚀"
+    },
+    {
+      "id": "1768942805742",
+      "name": "Golden autumn themed keychain",
+      "category": "resin",
+      "type": "physical",
+      "price": 399,
+      "status": "live",
+      "images": [
+        "assets/images/golden_autumn2.webp\"",
+        "assets/images/golden_autumn1.webp\""
+      ],
+      "description": "One on one limited edition❤️‍🔥"
     }
   ]
 }
