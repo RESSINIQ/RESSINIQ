@@ -1745,3 +1745,438 @@ SERVICES — SYSTEM BLUEPRINT
     gap: 16px;
   }
 }
+/* =====================================
+PRODUCT PAGE – LAYOUT POLISH (SAFE PATCH)
+NO LOGIC / NO STRUCTURE CHANGES
+===================================== */
+
+/* PAGE WIDTH & ALIGNMENT */
+.product-page {
+  padding-top: 110px;
+}
+
+.product-layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* MAIN IMAGE */
+.product-gallery {
+  width: 100%;
+}
+
+.main-image {
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #0e0e0e, #111);
+  padding: 12px;
+}
+
+/* THUMBNAILS */
+.thumbnail-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.thumbnail-row img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 12px;
+  opacity: 0.55;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.thumbnail-row img.active {
+  opacity: 1;
+  outline: 2px solid rgba(255,255,255,0.8);
+}
+
+/* INFO COLUMN */
+.product-info h1 {
+  font-size: clamp(26px, 3vw, 38px);
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+
+.product-info .muted {
+  margin-bottom: 6px;
+}
+
+.product-info .price {
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+.product-info p {
+  line-height: 1.65;
+  max-width: 520px;
+}
+
+/* ACTION BUTTONS */
+.product-actions {
+  margin-top: 26px;
+  display: flex;
+  gap: 14px;
+}
+
+/* MOBILE FIX */
+@media (max-width: 900px) {
+  .product-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .main-image {
+    max-height: 320px;
+  }
+
+  .product-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+/* =====================================
+PRODUCT PAGE – DESCRIPTION & CTA FIX
+NO HTML / NO JS CHANGES
+===================================== */
+
+/* DESCRIPTION SHOULD FILL SPACE */
+.product-info p,
+#productDescription {
+  max-width: 100%;
+  margin-top: 18px;
+  padding-right: 20px;
+}
+
+/* CTA POSITIONING – DESKTOP */
+.product-actions {
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+/* Keep buttons visually tied to price */
+.product-info .price + .product-actions {
+  margin-top: 12px;
+}
+
+/* MOBILE STICKY ACTION BAR */
+@media (max-width: 900px) {
+  .product-actions {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(10,10,10,0.92);
+    backdrop-filter: blur(12px);
+    padding: 14px 16px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    z-index: 999;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .product-actions button {
+    flex: 1;
+    max-width: 220px;
+  }
+
+  /* Prevent content hiding behind sticky bar */
+  .product-page {
+    padding-bottom: 120px;
+  }
+}
+/* =====================================
+PRODUCT PAGE — FINAL OVERRIDE FIX
+AUTHORITATIVE PATCH (DO NOT DUPLICATE)
+===================================== */
+
+/* WRAPPER ONLY — NO GRID HERE */
+.product-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 20px 40px;
+  display: block !important;
+}
+
+/* SINGLE SOURCE OF GRID TRUTH */
+.product-layout {
+  display: grid !important;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 56px;
+  align-items: flex-start;
+}
+
+/* IMAGE COLUMN */
+.product-gallery {
+  width: 100%;
+}
+
+.main-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  border-radius: 18px;
+}
+
+/* INFO COLUMN — FIX WIDTH ISSUE */
+.product-info {
+  width: 100%;
+  max-width: none !important;
+}
+
+/* DESCRIPTION MUST FILL SPACE */
+#productDescription {
+  max-width: none !important;
+  width: 100%;
+  line-height: 1.7;
+  margin-top: 18px;
+}
+
+/* ACTION BUTTONS */
+.product-actions {
+  display: flex;
+  gap: 14px;
+  margin: 20px 0 24px;
+}
+
+/* =========================
+MOBILE — HARD RESET
+========================= */
+@media (max-width: 900px) {
+
+  .product-layout {
+    grid-template-columns: 1fr !important;
+    gap: 32px;
+  }
+
+  .product-gallery,
+  .product-info {
+    width: 100%;
+  }
+
+  .product-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .product-actions button {
+    width: 100%;
+  }
+
+  .thumbnail-row {
+    justify-content: center;
+  }
+}
+/* =====================================
+PRODUCT PAGE — MOBILE SCREEN COMPAT FIX
+FINAL & SAFE
+===================================== */
+
+/* GLOBAL SAFETY: PREVENT HORIZONTAL SCROLL */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* PRODUCT PAGE MUST NEVER OVERFLOW */
+.product-page,
+.product-layout,
+.product-gallery,
+.product-info {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* IMAGE MUST SCALE INSIDE SCREEN */
+.main-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* FIX THUMBNAILS CAUSING OVERFLOW */
+.thumbnail-row {
+  max-width: 100%;
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+
+/* =========================
+MOBILE HARD RESET
+========================= */
+@media (max-width: 768px) {
+
+  /* Force full-width stacking */
+  .product-layout {
+    width: 100%;
+    grid-template-columns: 1fr !important;
+    margin: 0;
+  }
+
+  /* Remove any side spacing bugs */
+  .product-page {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* Text must wrap properly */
+  #productDescription,
+  .product-info p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Buttons fit screen */
+  .product-actions {
+    width: 100%;
+    padding: 0;
+  }
+
+  .product-actions button {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+/* =====================================
+PRODUCT PAGE — PREMIUM MOBILE UI UPGRADE
+===================================== */
+
+/* MOBILE FIRST POLISH */
+@media (max-width: 768px) {
+
+  /* PAGE SPACING */
+  .product-page {
+    padding-top: 96px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background: radial-gradient(
+      circle at top,
+      rgba(255,255,255,0.06),
+      transparent 60%
+    );
+  }
+
+  /* IMAGE CARD */
+  .product-gallery {
+    background: linear-gradient(
+      180deg,
+      rgba(255,255,255,0.04),
+      rgba(255,255,255,0.01)
+    );
+    padding: 18px;
+    border-radius: 26px;
+    box-shadow:
+      0 20px 60px rgba(0,0,0,0.45),
+      inset 0 1px 0 rgba(255,255,255,0.06);
+  }
+
+  .main-image {
+    border-radius: 18px;
+    background: #111;
+  }
+
+  /* THUMBNAILS — FLOATING PILLS */
+  .thumbnail-row {
+    justify-content: center;
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .thumbnail {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    opacity: 0.6;
+  }
+
+  .thumbnail.active {
+    opacity: 1;
+    outline: 2px solid rgba(255,255,255,0.9);
+    transform: scale(1.05);
+  }
+
+  /* PRODUCT INFO CARD */
+  .product-info {
+    margin-top: 26px;
+    padding: 26px 22px;
+    border-radius: 28px;
+    background: linear-gradient(
+      180deg,
+      rgba(255,255,255,0.04),
+      rgba(255,255,255,0.015)
+    );
+    box-shadow:
+      0 25px 70px rgba(0,0,0,0.45),
+      inset 0 1px 0 rgba(255,255,255,0.05);
+  }
+
+  /* TITLE */
+  .product-info h1 {
+    font-size: 1.55rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+
+  /* CATEGORY */
+  .product-info .muted {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+
+  /* PRICE — HERO */
+  .product-info .price {
+    font-size: 1.45rem;
+    font-weight: 600;
+    margin: 14px 0 22px;
+  }
+
+  /* DESCRIPTION */
+  #productDescription {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    opacity: 0.85;
+  }
+
+  /* ACTION BUTTONS — PREMIUM */
+  .product-actions {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 14px 16px 18px;
+    background: linear-gradient(
+      to top,
+      rgba(10,10,10,0.95),
+      rgba(10,10,10,0.75)
+    );
+    backdrop-filter: blur(14px);
+    border-top: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    gap: 12px;
+    z-index: 999;
+  }
+
+  .product-actions button {
+    flex: 1;
+    height: 52px;
+    font-size: 0.95rem;
+    border-radius: 999px;
+  }
+
+  /* PUSH CONTENT ABOVE STICKY BAR */
+  .product-page {
+    padding-bottom: 120px;
+  }
+}
